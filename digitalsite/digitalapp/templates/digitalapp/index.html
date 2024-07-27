@@ -1,12 +1,30 @@
 {% extends 'digitalapp/base.html' %}
 {% block body %}
     
+    <div class="product-container flex">
     {% for product in products %}
 
-        {{product.name}}
-        {{product.price}}
-        {{product.description}}
+        <div class="product shadow-lg w-1/4 rounded-lg m-10">
 
+            <div class="product-image">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftotalcomp.com%2Facculab-manual-va-pi-1624.html&psig=AOvVaw2gH8dqwAdWiJ-_Zh2Sq0-u&ust=1722160483775000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCr1fH5xocDFQAAAAAdAAAAABAE"
+                     alt="">
+            </div>
+            <div class="p-5">
+                <div class="font-bold">
+                    {{product.name}}
+                </div>
+                <div>
+                    {{product.description}}
+                </div>
+                <div class="text-green-500 font-bold">
+                    {{product.price}} €
+                </div>
+                <div class="mt-5">
+                    <a class="bg-green-500 text-white px-4 py-2" href="{% url 'detail' product.id %}">View Details</a>
+                </div>
+            </div>
+        </div>
     {% endfor %}
-
+    </div>
 {% endblock %}
