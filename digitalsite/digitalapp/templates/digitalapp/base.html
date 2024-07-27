@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <script src="https://kit.fontawesome.com/18498c0e87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="shadow-lg">
+        <div class="flex flex-wrap m-4 justify-between items-center mx-auto px-4 py-2.5">
+            <a class="flex items-center mr-4" title="logoimg" href="">
+                <i class="fa-brands fa-shopify mr-4 mb-2 text-4xl"></i>
+                <span class="self-center text-2xl font-semibold">Digital Marketplace</span>
+            </a>
+
+            <div class="flex items-center">
+                <a href="" class="mr-6 text-sm font-medium text-gray-500">Dashboard</a>
+                <a href="" class="mr-6 text-sm font-medium text-gray-500">Sales</a>
+                <a href="" class="mr-6 text-sm font-medium text-gray-500">Orders</a>
+                <a href="" class="mr-6 text-sm font-medium text-gray-500">Create Products</a>
+                <a href="" class="mr-6 text-sm font-medium text-gray-500">My Purchases</a>
+                <a href="" class="mr-6 text-sm font-medium text-gray-500">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block body %}
+      
+    {% endblock %}
+</body>
+</html>

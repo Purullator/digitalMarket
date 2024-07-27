@@ -1,0 +1,12 @@
+{% extends 'digitalapp/base.html' %}
+{% block body %}
+    
+    {% for product in products %}
+
+        {{product.name}}
+        {{product.price}}
+        {{product.description}}
+
+    {% endfor %}
+
+{% endblock %}
